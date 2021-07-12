@@ -66,20 +66,44 @@ let iconMenu = document.querySelector(".icon-menu");
 if (iconMenu != null) {
 	let delay = 500;
 	let menuBody = document.querySelector(".menu__body");
+	let headerRightMenu = document.querySelector(".header__right-menu");
 	iconMenu.addEventListener("click", function (e) {
 		if (unlock) {
 			body_lock(delay);
 			iconMenu.classList.toggle("_active");
 			menuBody.classList.toggle("_active");
+			headerRightMenu.classList.toggle("_active");
 		}
 	});
 };
+
+
+
+
+
 function menu_close() {
 	let iconMenu = document.querySelector(".icon-menu");
 	let menuBody = document.querySelector(".menu__body");
+	let headerRightMenu = document.querySelector(".header__right-menu");
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("_active");
+	headerRightMenu.classList.remove("_active");
 }
+// Убирает классы на определённой ширине
+const mediaQuery = window.matchMedia('(min-width: 991.98px)')
+function handleTabletChange(e) {
+	if (e.matches) {
+		let iconMenu = document.querySelector(".icon-menu");
+		let menuBody = document.querySelector(".menu__body");
+		let headerRightMenu = document.querySelector(".header__right-menu");
+		iconMenu.classList.remove("_active");
+		menuBody.classList.remove("_active");
+		headerRightMenu.classList.remove("_active");
+	}
+}
+mediaQuery.addListener(handleTabletChange)
+handleTabletChange(mediaQuery)
+
 //=================
 //BodyLock
 function body_lock(delay) {

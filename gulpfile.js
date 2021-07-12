@@ -1,10 +1,11 @@
+var scss = require('gulp-sass')(require('sass'));
 //let replace = require('gulp-replace'); //.pipe(replace('bar', 'foo'))
 let { src, dest } = require("gulp");
 let fs = require('fs');
 let gulp = require("gulp");
 let browsersync = require("browser-sync").create();
 let autoprefixer = require("gulp-autoprefixer");
-let scss = require("gulp-sass");
+
 let group_media = require("gulp-group-css-media-queries");
 let plumber = require("gulp-plumber");
 let del = require("del");
