@@ -90,7 +90,7 @@ function menu_close() {
 	headerRightMenu.classList.remove("_active");
 }
 // Убирает классы на определённой ширине
-const mediaQuery = window.matchMedia('(min-width: 991.98px)')
+/*const mediaQuery = window.matchMedia('(min-width: 991.98px)')
 function handleTabletChange(e) {
 	if (e.matches) {
 		let iconMenu = document.querySelector(".icon-menu");
@@ -103,7 +103,7 @@ function handleTabletChange(e) {
 }
 mediaQuery.addListener(handleTabletChange)
 handleTabletChange(mediaQuery)
-
+*/
 //=================
 //BodyLock
 function body_lock(delay) {

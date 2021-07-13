@@ -1,3 +1,59 @@
 //====================================================================================================
 
 //====================================================================================================
+
+.hero {
+    background:  center center / cover no-repeat url(../img/hero__bg.png);
+
+    // .hero__container
+    &__container {
+
+
+    }
+
+    // .hero__contant
+
+    &__contant {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-end;
+    }
+
+    // .hero__title
+
+    &__title {
+    }
+
+    // .hero__btn
+
+    &__btn {
+    }
+
+    // .hero__brands
+
+    &__brands {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+}
+
+.bnt {
+
+    // .bnt_main
+
+    &_main {
+    }
+}
+.btn {
+}
+.hero-brands {
+
+    // .hero-brands__item
+
+    &__item {
+    }
+}

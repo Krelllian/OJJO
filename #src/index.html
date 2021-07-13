@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+@@include('_head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+
+
+			<div class="hero">
+				<div class="hero__container _container">
+					<div class="hero__contant">
+						<div class="hero__title">
+							<p>Вечные ценности...</p>
+							<a class="hero__btn bnt_main btn">каталог изделий</a>
+							<div class="hero__brands hero-brands">
+								<div class="hero-brands__item">
+									<img src="img/brand-1.svg" alt="coco fine jewelry">
+								</div>
+								<div class="hero-brands__item">
+									<img src="img/brand-1.svg" alt="coco fine jewelry">
+								</div>
+								<div class="hero-brands__item">
+									<img src="img/brand-1.svg" alt="coco fine jewelry">
+								</div>
+								<div class="hero-brands__item">
+									<img src="img/brand-1.svg" alt="coco fine jewelry">
+								</div>
+								<div class="hero-brands__item">
+									<img src="img/brand-1.svg" alt="coco fine jewelry">
+								</div>
+								<div class="hero-brands__item">
+									<img src="img/brand-1.svg" alt="coco fine jewelry">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
 </html>

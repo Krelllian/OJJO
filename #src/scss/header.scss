@@ -3,11 +3,15 @@
 //====================================================================================================
 
 .header {
-	background-color: #333333;
+	//background-color: #333333;
+	position: absolute;
+	left: 0;
+	right: 0;
 	// .header__content
 
 	&__content {
 		position: relative;
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -41,16 +45,35 @@
 	&__right-menu {
 		display: flex;
 		align-items: center;
-		color: #FFF;
+
 		:not(:last-child) {
 			margin-right: 25px;
 		}
 		@media (max-width:$md2+px){
 			display: none;
+			:not(:last-child) {
+				margin-right: 0;
+			}
+			&._active {
+					display: block;
+				  }
 		}
-		&._active {
+
+		&__item {
+			@media (max-width:$md2+px){
+				margin-bottom: 25px;
+				color: white;
+				font-size: 21px;
+			}
+		}
+		a {
 			display: block;
-		  }
+			color: #FFF;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: gold;
+			}
+		}
 	}
 
 	// .header__search
@@ -63,26 +86,67 @@
  		border: none;
 		color: white;
 		font-family: "Gilroy-Regular";
-		background: left center no-repeat url(../img/search.svg);
-
-
+		background: left top no-repeat url(../img/search.svg);
 
 		&::placeholder {
 		color: rgb(194, 194, 194);
 		font-family: "Gilroy-Regular";
+		}
+		@media (max-width:$md2+px){
+			width: 200px;
 		}
 	}
 
 	// .header__acc-enter
 
 	&__acc-enter {
+		@media (max-width:$md2+px){
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #FFFFFF;
+				margin-bottom: 25px;
+
+			}
+		}
 
 	}
 
 	&__icons {
 		display: flex;
 		align-items: center;
-		fill: white;
+		flex-wrap: wrap;
+
+		svg{
+			fill: white;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				transform: scale(1.4);
+				fill: gold;
+			}
+		}
+
+
+		@media (max-width:$md2+px){
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #FFFFFF;
+				margin-bottom: 25px;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: #FFFFFF;
+				margin-top: 25px;
+			}
+		}
 	}
 	// .header__acc-registration
 
@@ -94,6 +158,17 @@
 	&__like {
 		width: 18px;
 		height: 18px;
+		svg{
+			width: 100%;
+			height: 100%;
+			&:hover {
+				fill: rgb(253, 63, 63);
+			}
+		}
+		@media (max-width:$md2+px){
+			width: 36px;
+			height: 36px;
+		}
 	}
 }
 
@@ -116,9 +191,13 @@
 			width: 100vw;
 			height: 100vh;
 			background-color: #333;
+			overflow: auto;
 		}
 		&._active {
-			display: block;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
 		  }
 	}
 
@@ -129,12 +208,35 @@
 		:not(:last-child) {
 			margin-right: 40px;
 		}
+		@media (max-width:$md2+px){
+			margin-top: 140px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		a {
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: gold;
+			}
+		}
+		@media (max-width:$md2+px){
+			li:not(:last-child) {
+				margin-bottom: 30px;
+			}
+			li:last-child {
+				margin-bottom: 35px;
+			}
+		}
 	}
 
 	// .menu__link
 
 	&__link {
 		color: white;
+		@media (max-width:$md2+px){
+			font-size: 21px;
+		}
 	}
 }
 .icon-menu {
@@ -142,6 +244,15 @@
 .acc-icon {
 	width: 16px;
 	height: 16px;
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+	@media (max-width:$md2+px){
+		width: 33px;
+		height: 33px;
+		margin-right: 25px!important;
+	}
 }
 
 
