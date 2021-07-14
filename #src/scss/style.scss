@@ -8,6 +8,7 @@
 //&display=swap&subset=cyrillic-ext
 @import "fonts";
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif:700);
+@import url(https://fonts.googleapis.com/css?family=Marck+Script:regular&display=swap&subset=cyrillic-ext);
 
 
 //</Подключаем шрифты>=======================================================================================
@@ -84,6 +85,31 @@ body {
 	flex: 1 1 auto;
 }
 //===================================================================================================================================
+
+img {
+	width: 100%;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 35px;
+	background-color: #333;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: white;
+	border: 1px solid #FFFFFF;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background-color: white;
+		border-color: #333;
+		color: #333;
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 

@@ -11,7 +11,6 @@
 
 	&__content {
 		position: relative;
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -34,6 +33,9 @@
 		transform: translateX(-50%);
 		width: 216px;
 		height: 52px;
+		@media (max-width:$md2+px){
+			top: 19px;
+		}
 		@media (max-width:$md4+px){
 			 left: 7%;
 			 transform: initial;
@@ -182,8 +184,10 @@
 	// .menu__body
 
 	&__body {
+
 		@media (max-width:$md2+px){
 			display: none;
+			padding-top: 50px;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -198,7 +202,10 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
-		  }
+			z-index: 4;
+		 }
+
+
 	}
 
 	// .menu__list
@@ -209,18 +216,18 @@
 			margin-right: 40px;
 		}
 		@media (max-width:$md2+px){
-			margin-top: 140px;
-			display: flex;
+			margin-top: 40px;
 			flex-direction: column;
 		}
 
 		a {
-			transition: all 0.3s ease 0s;
+			transition: color 0.3s ease 0s;
 			&:hover {
 				color: gold;
 			}
 		}
 		@media (max-width:$md2+px){
+			margin-left: -25px;
 			li:not(:last-child) {
 				margin-bottom: 30px;
 			}
@@ -236,6 +243,21 @@
 		color: white;
 		@media (max-width:$md2+px){
 			font-size: 21px;
+		}
+	}
+
+	&__logo {
+		display: none;
+		position: absolute;
+		top: 19px;
+		width: 216px;
+		height: 52px;
+		@media (max-width:$md2+px){
+			display: block;
+		}
+		@media (max-width:$md4+px){
+			left: 7%;
+			//right: 10%;
 		}
 	}
 }
@@ -264,8 +286,8 @@
 	@media (max-width: $md2+px) {
 		display: block;
 		position: absolute;
-		top: 20px;
-		right: 20px;
+		top: 30px;
+		right: 30px;
 		width: 33px;
 		height: 28px;
 		cursor: pointer;

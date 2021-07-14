@@ -15,29 +15,55 @@
 
     &__contant {
         display: flex;
-        height: 100vh;
+        height: 850px;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
         justify-content: flex-end;
     }
 
     // .hero__title
 
     &__title {
+        position: absolute;
+        top: 93px;
+        font-family: Marck Script;
+        font-size: 98px;
+        line-height: 56px;
+        letter-spacing: 6px;
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+        @media (max-width:$md2+px){
+            top: 83px;
+            font-size: 83px;
+        }
+        @media (max-width:$md3+px){
+            top: 83px;
+            font-size: 44px;
+        }
+        @media (max-width:$md4+px){
+            top: 65px;
+            font-size: 25px;
+        }
     }
 
     // .hero__btn
 
     &__btn {
+        margin-bottom: 20px;
     }
 
     // .hero__brands
 
     &__brands {
+        position: relative;
         display: flex;
+        align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 30px;
+        padding-top: 15px;
+        border-top: 1px solid #FFFFFF;
+
     }
 }
 
@@ -51,9 +77,14 @@
 .btn {
 }
 .hero-brands {
-
-    // .hero-brands__item
-
+    min-height: 136px;
+    @media (max-width:$md3+px){
+       //max-height: 120px;
+    }
     &__item {
+        @media (max-width: 510px){
+            width: 33.333%;
+       }
+
     }
 }
