@@ -1,0 +1,129 @@
+.mailing {
+    background: center center url("../img/salons-bg.jpg");
+    padding: 100px 15px;
+    @media (max-width:$md2+px){
+        padding: 50px 15px;
+    }
+    // .mailing__container
+
+    &__container {
+        text-align: center;
+    }
+
+    // .mailing__suptitle
+
+    &__suptitle {
+        margin-bottom: 15px;
+        font-size: 21px;
+        line-height: 140%;
+        color: white;
+    }
+
+    // .mailing__title
+
+    &__title {
+        margin-bottom: 60px;
+        font-family: Noto Serif;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 41px;
+        color: white;
+        @media (max-width:$md2+px){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width:$md2+px){
+        display: grid;
+    }
+
+    // .subscribe__list
+
+    &__list {
+        margin-right: 80px;
+        font-size: 18px;
+        line-height: 140%;
+        color: white;
+        text-align: left;
+        @media (max-width:$md2+px){
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 70px;
+
+        }
+
+    }
+
+    // .subscribe__item
+
+    &__item {
+        padding-left: 37px;
+        background: left center no-repeat url("../img/subscribe__li-icon.svg");
+        white-space: nowrap;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        @media (max-width:$md2+px){
+        }
+    }
+
+    // .subscribe__form
+
+    &__form {
+        position: relative;
+        background: white;
+        padding: 20px 22px;
+        z-index: 1;
+        @media (max-width:$md2+px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -14px;
+            left: -14px;
+            width: calc(100% + 28px);
+            height: calc(100% + 28px);
+            border: 1px solid white;
+            z-index: -1;
+        }
+    }
+
+    // .subscribe__input
+
+    &__input {
+        padding: 10px;
+        margin-right: 15px;
+        width: 200px;
+        height: 45px;
+        border: 1px solid #D6D6D6;
+
+        @media (max-width:$md2+px){
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &::placeholder {
+            padding-left: 10px;
+            font-family: "Gilroy-Medium";
+            line-height: 16px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    }
+
+    // .subscribe__btn
+
+    &__btn {
+        height: 45px;
+    }
+}
+.btn {
+}

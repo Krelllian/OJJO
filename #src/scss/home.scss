@@ -3,7 +3,11 @@
 //====================================================================================================
 
 .hero {
-    background:  center center / cover no-repeat url(../img/hero__bg.png);
+    background:  center center / cover no-repeat url(../img/hero__bg.jpg);
+
+    @media (max-width:$md4+px){
+        background:  center -60px / cover no-repeat url(../img/hero-bg_mobile.jpg);
+    }
 
     // .hero__container
     &__container {
@@ -19,6 +23,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
+        @media (min-width:1740px){
+            min-height: 950px;
+        }
     }
 
     // .hero__title
@@ -41,7 +48,8 @@
             font-size: 44px;
         }
         @media (max-width:$md4+px){
-            top: 65px;
+            left: 7%;
+            top: 80px;
             font-size: 25px;
         }
     }
@@ -60,10 +68,12 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         padding-top: 15px;
         border-top: 1px solid #FFFFFF;
-
+        @media (max-width:$md4+px){
+            margin-bottom: 90px;
+        }
     }
 }
 
@@ -97,6 +107,11 @@
 
     &__container {
         padding-top: 100px;
+        padding-bottom: 120px;
+        @media (max-width:$md2+px){
+            margin-top: -20px;
+            padding-bottom: 50px;
+        }
         @media (max-width:$md3+px){
              padding-top: 50px;
         }
@@ -226,5 +241,260 @@
 }
 .btn {
 }
+
+//========================================================================================================================================================
+
+
+.salons {
+    background: center center url("../img/salons-bg.jpg");
+    // .salons__container
+
+    &__container {
+        padding: 50px 15px;
+        text-align: center;
+        max-width: 730px;
+    }
+
+    // .salons__content
+
+    &__content {
+
+    }
+
+    // .salons__suptitle
+
+    &__suptitle {
+        margin-bottom: 15px;
+        font-size: 21px;
+        line-height: 140%;
+        color: #FFFFFF;
+    }
+
+    // .salons__subtitle
+
+    &__title {
+        margin-bottom: 30px;
+        font-family: Noto Serif;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 41px;
+        color: #FFFFFF;
+    }
+
+    // .salons__text
+
+    &__text {
+        margin-bottom: 40px;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+    }
+
+    // .salons__btn
+
+    &__btn {
+
+    }
+}
+
+.btn {
+    font-family: Gilroy-Medium;
+    font-size: 18px;
+    line-height: 21px;
+    &:hover {
+        border-color: #333;
+    }
+}
+
+//========================================================================================================================================================
+
+
+.articles {
+    margin: 100px 0;
+    // .articles__container
+
+    &__container {
+        text-align: center;
+    }
+
+    // .articles__suptitle
+
+    &__suptitle {
+        margin-bottom: 15px;
+        font-size: 21px;
+        line-height: 140%;
+    }
+
+    // .articles__title
+
+    &__title {
+        margin-bottom: 60px;
+        font-family: Noto Serif;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 41px;
+    }
+
+    // .articles__list
+
+    &__list {
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        @media (min-width:$md2+px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    // .articles__item
+
+    &__item {
+        position: relative;
+        img{
+            max-width: 350px;
+            max-height: 370px;
+        }
+
+        &:hover img{
+            filter: contrast(150%);
+        }
+    }
+
+    // .articles__btn
+
+    &__btn {
+    }
+}
+
+.item-article {
+
+    // .item-article__text
+
+    &__text {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        max-width: 250px;
+
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+    }
+}
+.btn {
+}
+
+//========================================================================================================================================================
+
+
+.social {
+    margin-bottom: 100px;
+    // .social__hashtag
+
+    &__hashtag {
+        margin-bottom: 15px;
+        font-size: 21px;
+        line-height: 140%;
+        text-align: center;
+    }
+
+    // .social__title
+
+    &__title {
+        margin-bottom: 60px;
+        font-family: Noto Serif;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+    }
+
+    // .social__grid
+
+    &__grid {
+    }
+}
+.socials {
+
+    // .socials__container
+
+    &__container {
+        padding: 0 41px;
+    }
+}
+.grid-social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, 300px);
+    @media (max-width:$md2+px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width:$md2+px){
+        gap: 20px;
+    }
+
+    // .grid-social__item
+
+    &__item {
+        min-height: 300px;
+    }
+
+    // .grid-social__video
+
+    &__video {
+        cursor: pointer;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        // .grid-social__video_1
+
+        &_1 {
+            grid-column: span 2;
+        }
+
+        // .grid-social__video_2
+
+        &_2 {
+            grid-column: span 2;
+        }
+    }
+
+    // .grid-social__img
+
+    &__img {
+        // .grid-social__img_1
+        @media (max-width:$md2+px){
+            display: none;
+        }
+        &_1 {
+            background: no-repeat center center / cover url("../img/social/social-1.jpg");
+        }
+
+        // .grid-social__img_2
+
+        &_2 {
+            background: no-repeat center center / cover url("../img/social/social-2.jpg");
+        }
+
+        // .grid-social__img_3
+
+        &_3 {
+            background: no-repeat center center / cover url("../img/social/social-3.jpg");
+        }
+
+        // .grid-social__img_4
+
+        &_4 {
+            background: no-repeat center center / cover url("../img/social/social-4.jpg");
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+@import "mailing";
 
 

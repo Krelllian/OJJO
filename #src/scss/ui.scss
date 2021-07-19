@@ -271,7 +271,7 @@ img {
 }
 
 .btn {
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	padding: 15px 35px;
@@ -288,6 +288,17 @@ img {
 		background-color: white;
 		border-color: #333;
 		color: #333;
+	}
+}
+
+.btn__white {
+	background-color: white;
+	border-color: #333;
+	color: #333;
+	&:hover {
+		color: white;
+		border-color: white;
+		background-color: #333;
 	}
 }
 
