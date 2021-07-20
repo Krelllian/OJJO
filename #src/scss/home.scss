@@ -3,7 +3,7 @@
 //====================================================================================================
 
 .hero {
-    background:  center center / cover no-repeat url(../img/hero__bg.jpg);
+    background:  center center / cover no-repeat url(../img/hero-bg.jpg);
 
     @media (max-width:$md4+px){
         background:  center -60px / cover no-repeat url(../img/hero-bg_mobile.jpg);
@@ -225,6 +225,7 @@
         }
 
         &:hover img{
+            transition: all 0.3s ease 0s;
             filter: contrast(150%);
         }
         p {
@@ -357,6 +358,7 @@
         }
 
         &:hover img{
+
             filter: contrast(150%);
         }
     }
@@ -496,5 +498,7 @@
 //========================================================================================================================================================
 
 @import "mailing";
+
+//========================================================================================================================================================
 
 

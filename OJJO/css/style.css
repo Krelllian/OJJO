@@ -1122,8 +1122,172 @@ img {
   display: none;
 }
 
+.footer {
+  padding-top: 80px;
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.footer__top-item {
+  width: 25%;
+}
+
+.footer__top-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__title {
+  margin-bottom: 30px;
+  font-family: "Gilroy-Medium";
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.1em;
+}
+
+.footer__title::after {
+  margin-top: 10px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+
+.links-footer__item {
+  display: block;
+  line-height: 150%;
+  margin-bottom: 10px;
+  color: #333;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.links-footer__item:hover {
+  color: #c4ab1e;
+}
+
+.pay-footer__text {
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+
+.pay-footer__methods picture:not(:last-child) {
+  padding-right: 20px;
+}
+
+.pay-footer__img {
+  width: 45px;
+  height: 30px;
+}
+
+.contacts-footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  line-height: 150%;
+  color: #333;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.contacts-footer__item:hover {
+  color: #c4ab1e;
+}
+
+.contacts-footer__item svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  fill: currentcolor;
+}
+
+.socials-footer svg {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.socials-footer__text {
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+
+.socials-footer__icons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials-footer__icon:not(:last-child) {
+  margin-right: 20px;
+}
+
+.socials-footer__icon svg {
+  fill: #333;
+}
+
+.youtube-icon:hover svg {
+  fill: red;
+}
+
+.vk-icon:hover svg {
+  fill: #2787f5;
+}
+
+.fb-icon:hover svg {
+  fill: #000000;
+}
+
+.telegram-icon:hover svg {
+  fill: #0088cc;
+}
+
+.e-icon:hover svg {
+  fill: #000000;
+}
+
+.bottom-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bottom-footer a {
+  color: #333;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.bottom-footer a:hover {
+  color: #c4ab1e;
+}
+
+.bottom-footer__item {
+  margin-bottom: 20px;
+}
+
 ._no-webp .hero{
-  background: center center/cover no-repeat url(../img/hero__bg.jpg); }
+  background: center center/cover no-repeat url(../img/hero-bg.jpg); }
 
 .hero__contant {
   display: -webkit-box;
@@ -1265,6 +1429,9 @@ img {
 }
 
 .filter__item:hover img {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   -webkit-filter: contrast(150%);
           filter: contrast(150%);
 }
@@ -1581,10 +1748,6 @@ img {
           flex: 1 1 auto;
 }
 
-body {
-  height: 30000px;
-}
-
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -1784,6 +1947,21 @@ body {
     bottom: calc(50% - 2px);
   }
 
+  .footer__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .footer__top-item {
+    width: calc(50% - 30px);
+    margin-bottom: 30px;
+  }
+
+  .footer__top-item:last-child {
+    margin-right: 30px;
+  }
+
   .hero__title {
     top: 83px;
     font-size: 83px;
@@ -1845,6 +2023,15 @@ body {
 }
 
 @media (max-width: 767.98px) {
+  .bottom-footer {
+    display: block;
+  }
+
+  .bottom-footer__item {
+    display: block;
+    text-align: center;
+  }
+
   .hero__title {
     top: 83px;
     font-size: 44px;
@@ -1883,6 +2070,11 @@ body {
     left: 7%;
   }
 
+  .footer__top-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
   ._no-webp .hero{
     background: center -60px/cover no-repeat url(../img/hero-bg_mobile.jpg); }
 
@@ -1916,7 +2108,7 @@ body {
   }
 }
 
-._webp .hero{ background: center center/cover no-repeat url(../img/hero__bg.webp); }
+._webp .hero{ background: center center/cover no-repeat url(../img/hero-bg.webp); }
 
 ._webp .salons{ background: center center url(../img/salons-bg.webp); }
 

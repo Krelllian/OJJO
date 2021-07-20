@@ -1,5 +1,271 @@
-footer{}
+
 //====================================================================================================
+.footer {
+    padding-top: 80px;
+    // .footer__container
+
+    &__container {
+
+    }
+
+    // .footer__top
+
+    &__top {
+        display: flex;
+        margin-bottom: 60px;
+        @media (max-width:$md2+px){
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+        &-item {
+            width: 25%;
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+            @media (max-width:$md2+px){
+                width: calc(50% - 30px);
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-right: 30px;
+                }
+            }
+            @media (max-width:$md4+px){
+                 width: 100%;
+                 margin-bottom: 10px;
+            }
+        }
+    }
+
+    // .footer__links
+
+    &__links {
+
+    }
+
+    // .footer__title
+
+    &__title {
+        margin-bottom: 30px;
+        font-family: "Gilroy-Medium";
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.1em;
+        &::after {
+            margin-top: 10px;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+        }
+    }
+
+    // .footer__pay
+
+    &__pay {
+
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+
+    }
+
+    // .footer__socials
+
+    &__socials {
+
+    }
+
+    // .footer__bottom
+
+    &__bottom {
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+    }
+}
+
+.links-footer {
+
+    // .links-footer__title
+
+    &__title {
+    }
+
+    // .links-footer__item
+
+    &__item {
+        display: block;
+        line-height: 150%;
+        margin-bottom: 10px;
+        color: #333;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: rgb(196, 171, 30);
+        }
+    }
+}
+.pay-footer {
+
+    // .pay-footer__title
+
+    &__title {
+
+    }
+
+    // .pay-footer__text
+
+    &__text {
+        margin-bottom: 20px;
+        line-height: 150%;
+    }
+
+    // .pay-footer__methods
+
+    &__methods {
+        picture {
+            &:not(:last-child) {
+                padding-right: 20px;
+            }
+        }
+    }
+
+    &__img {
+        //margin-right: 20px;
+        width: 45px;
+        height: 30px;
+    }
+}
+
+
+
+.contacts-footer {
+
+    // .contacts-footer__title
+
+    &__title {
+    }
+
+    // .contacts-footer__item
+
+    &__item {
+        display: flex;
+        margin-bottom: 10px;
+
+        line-height: 150%;
+        color: #333;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: rgb(196, 171, 30);
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            fill: currentcolor;
+        }
+    }
+}
+.socials-footer {
+
+    // .socials-footer__title
+    svg {
+        transition: all 0.3s ease 0s;
+    }
+    &__title {
+    }
+
+    // .socials-footer__text
+
+    &__text {
+        line-height: 150%;
+        margin-bottom: 20px;
+    }
+
+    // .socials-footer__icons
+
+    &__icons {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    // .socials-footer__icon
+
+    &__icon {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        svg {
+            fill: #333;
+        }
+    }
+}
+.youtube-icon {
+    &:hover {
+        & svg {
+            fill:red;
+        }
+    }
+}
+.vk-icon {
+    &:hover {
+        & svg {
+            fill: #2787f5;
+        }
+    }
+}
+.fb-icon {
+    &:hover {
+        & svg {
+            fill: 	#000000;
+        }
+    }
+}
+.telegram-icon {
+    &:hover {
+        & svg {
+            fill: 	#0088cc;
+        }
+    }
+}
+.e-icon {
+    &:hover {
+        & svg {
+            fill: 	#000000;
+        }
+    }
+}
+.bottom-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #333;
+    justify-content: space-between;
+    @media (max-width:$md3+px){
+         display: block;
+    }
+    a  {
+        color: #333;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            color: rgb(196, 171, 30);
+        }
+    }
+    // .bottom-footer__item
+
+    &__item {
+        margin-bottom: 20px;
+        @media (max-width:$md3+px){
+             display: block;
+             text-align: center;
+        }
+    }
+}
 
 //====================================================================================================
 
