@@ -94,20 +94,52 @@ function menu_close() {
 	headerRightMenu.classList.remove("_active");
 }
 // Убирает классы на определённой ширине
-/*const mediaQuery = window.matchMedia('(min-width: 991.98px)')
+const mediaQuery = window.matchMedia('(min-width: 991.98px)')
 function handleTabletChange(e) {
 	if (e.matches) {
+		let body = document.querySelector("body");
+
 		let iconMenu = document.querySelector(".icon-menu");
 		let menuBody = document.querySelector(".menu__body");
 		let headerRightMenu = document.querySelector(".header__right-menu");
 		iconMenu.classList.remove("_active");
 		menuBody.classList.remove("_active");
 		headerRightMenu.classList.remove("_active");
+
+		body.classList.remove("_lock");
+		console.log(menuBody);
 	}
 }
 mediaQuery.addListener(handleTabletChange)
 handleTabletChange(mediaQuery)
+//========================================================================================================================================================
+
+
+/*
+const mediaQuery = window.matchMedia('(min-width: 991.98px)')
+const madiaQueryMax = window.matchMedia('(max-width: 991.98px)')
+function handleTabletChange(e) {
+	if (e.matches) {
+		let body = document.querySelector("body");
+		body.classList.remove("_lock");
+	}
+}
+
+function removeBodyLock(e) {
+	if (e.matches) {
+		let body = document.querySelector("body");
+		body.classList.add("_lock");
+		console.log(body);
+	}
+}
+
+
+mediaQuery.addListener(handleTabletChange)
+handleTabletChange(mediaQuery)
+madiaQueryMax.addListener(removeBodyLock)
+removeBodyLock(madiaQueryMax)
 */
+
 //=================
 //BodyLock
 function body_lock(delay) {
@@ -154,6 +186,8 @@ function body_lock_add(delay) {
 		}, delay);
 	}
 }
+
+
 //=================
 // LettersAnimation
 let title = document.querySelectorAll('._letter-animation');
@@ -647,6 +681,11 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
+
+
+//========================================================================================================================================================
+
+
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
