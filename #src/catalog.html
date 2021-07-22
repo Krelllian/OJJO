@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('_header_fixed.html',{})
+        <main class="page">
+
+
+            <div class="catalog">
+                <div class="catalog__container _container">
+
+                    <ul class="sorting-catalog__list">
+                        <li class="sorting-catalog__categ">Бренд<span class="sorting-catalog__triangle"></span>
+                            <ul class="sorting-catalog__sub-menu-list">
+                                <li class="sorting-catalog__sub-menu-item">Gucci</li>
+                                <li class="sorting-catalog__sub-menu-item">Versace</li>
+                                <li class="sorting-catalog__sub-menu-item">Burberry</li>
+                                <li class="sorting-catalog__sub-menu-item">Chanel</li>
+                            </ul>
+                        </li>
+                        <li class="sorting-catalog__categ">Цена<span class="sorting-catalog__triangle"></span>
+                            <ul class="sorting-catalog__sub-menu-list">
+                                <li class="sorting-catalog__sub-menu-item">От 1 000р</li>
+                                <li class="sorting-catalog__sub-menu-item">От 10 000р</li>
+                                <li class="sorting-catalog__sub-menu-item">От 100 000р</li>
+                            </ul>
+                        </li>
+                        <li class="sorting-catalog__categ">Для кого<span class="sorting-catalog__triangle"></span>
+                            <ul class="sorting-catalog__sub-menu-list">
+                                <li class="sorting-catalog__sub-menu-item">Для неё</li>
+                                <li class="sorting-catalog__sub-menu-item">Для него</li>
+                                <li class="sorting-catalog__sub-menu-item">Для себя</li>
+                                <li class="sorting-catalog__sub-menu-item">Для всех</li>
+                            </ul>
+                        </li>
+                        <li class="sorting-catalog__categ">Коллекция<span class="sorting-catalog__triangle"></span>
+                            <ul class="sorting-catalog__sub-menu-list">
+                                <li class="sorting-catalog__sub-menu-item">2021 года</li>
+                                <li class="sorting-catalog__sub-menu-item">2077 года</li>
+                            </ul>
+                        </li>
+                        <li class="sorting-catalog__categ">Сезон<span class="sorting-catalog__triangle"></span>
+                            <ul class="sorting-catalog__sub-menu-list">
+                                <li class="sorting-catalog__sub-menu-item">Лето</li>
+                                <li class="sorting-catalog__sub-menu-item">Демисезон</li>
+                            </ul>
+                        </li>
+                        <li class="sorting-catalog__categ">Событие<span class="sorting-catalog__triangle"></span>
+                            <ul class="sorting-catalog__sub-menu-list">
+                                <ul class="sorting-catalog__sub-menu-item">Свадьба</ul>
+                                <ul class="sorting-catalog__sub-menu-item">День рождения</ul>
+                                <ul class="sorting-catalog__sub-menu-item">Торжество</ul>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <div class="catalog__cards">
+                        <div class="catalog__card card-catalog">
+                            <img src="img/catalog-card-img.png" alt="подвеска">
+                            <div class="card-catalog__title">Подвеска</div>
+                            <div class="card-catalog__brand">Dolce & Gabanna</div>
+                            <div class="card-catalog__price btn">175 000 ₽</div>
+                        </div>
+                        <div class="catalog__card card-catalog">
+                            <img src="img/catalog-card-img.png" alt="подвеска">
+                            <div class="card-catalog__title">Подвеска</div>
+                            <div class="card-catalog__brand">Dolce & Gabanna</div>
+                            <div class="card-catalog__price btn">175 000 ₽</div>
+                        </div>
+                        <div class="catalog__card card-catalog">
+                            <img src="img/catalog-card-img.png" alt="подвеска">
+                            <div class="card-catalog__title">Подвеска</div>
+                            <div class="card-catalog__brand">Dolce & Gabanna</div>
+                            <div class="card-catalog__price btn">175 000 ₽</div>
+                        </div>
+                        <div class="catalog__card card-catalog">
+                            <img src="img/catalog-card-img.png" alt="подвеска">
+                            <div class="card-catalog__title">Подвеска</div>
+                            <div class="card-catalog__brand">Dolce & Gabanna</div>
+                            <div class="card-catalog__price btn">175 000 ₽</div>
+                        </div>
+                        <div class="catalog__card card-catalog">
+                            <img src="img/catalog-card-img.png" alt="подвеска">
+                            <div class="card-catalog__title">Подвеска</div>
+                            <div class="card-catalog__brand">Dolce & Gabanna</div>
+                            <div class="card-catalog__price btn">175 000 ₽</div>
+                        </div>
+                        <div class="catalog__card card-catalog">
+                            <img src="img/catalog-card-img.png" alt="подвеска">
+                            <div class="card-catalog__title">Подвеска</div>
+                            <div class="card-catalog__brand">Dolce & Gabanna</div>
+                            <div class="card-catalog__price btn">175 000 ₽</div>
+                        </div>
+                    </div>
+
+                    <button class="catalog__more-btn btn">покажите еще</button>
+                    <div class="catalog__content ">
+                        <div class="catalog__content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, lorem eu commodo porttitor
+                            erat. Amet mauris cursus bibendum in egestas. Nulla porttitor amet quam elit, mauris. Tortor
+                            egestas dignissim augue suspendisse rutrum pretium lobortis dolor. Commodo sagittis at amet
+                            faucibus faucibus id. Bibendum placerat convallis gravida eu quisque et augue. Sed dignissim
+                            amet ut vitae at ornare sed.
+                            Commodo sagittis at amet faucibus faucibus id. Bibendum placerat convallis gravida eu
+                            quisque et augue. Sed dignissim amet ut vitae at ornare sed.
+                        </div>
+                        <div class="catalog__content-decor">
+                            <img src="img/catalog-decor.svg" aria-hidden='true'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            @@include('_mailing.html',{})
+        </main>
+        @@include('_footer.html',{})
+    </div>
+    @@include('_popup.html',{})
+    @@include('_js.html',{})
+</body>
+
+</html>

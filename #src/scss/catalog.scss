@@ -1,0 +1,155 @@
+.catalog {
+    margin-top: 190px;
+
+    // .catalog__container
+
+    &__container {
+    }
+
+    // .catalog__cards
+
+    &__cards {
+    }
+
+    // .catalog__card
+
+    &__card {
+        img {
+            max-width: 280px;
+            max-height: 220px;
+        }
+    }
+
+    // .catalog__more-btn
+
+    &__more-btn {
+    }
+
+    // .catalog__content
+
+    &__content {
+    }
+
+    // .catalog__content-text
+
+    &__content-text {
+    }
+
+    // .catalog__content-decor
+
+    &__content-decor {
+    }
+}
+
+.sorting-catalog {
+    // .sorting-catalog__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        margin-bottom: 60px;
+
+        font-size: 16px;
+        line-height: 150%;
+
+        align-items: top;
+
+        //justify-content: center;
+        @media (max-width: 1090px){
+            grid-template-columns: 1fr 1fr 1fr
+
+        }
+    }
+
+    // .sorting-catalog__categ
+
+    &__categ {
+        position: relative;
+        margin-right: 17px;
+        margin-bottom: auto;
+        cursor: pointer;
+        &::after {
+            content: "";
+            margin-top: 4px;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+        }
+        &.active>.sorting-catalog__sub-menu-list {
+            display: block;
+            @media (max-width: 1090px){
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__triangle {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+
+        border-bottom: 8px solid #333;
+    }
+
+    // .sorting-catalog__sub-menu-list
+
+    &__sub-menu-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding-top: 10px;
+        background-color: #ffffff;
+        padding: 3px 0 0 0;
+        border-radius: 3px;
+
+        font-size: 14px;
+
+    }
+
+    // .sorting-catalog__sub-menu-item
+
+    &__sub-menu-item {
+
+        margin-bottom: 3px;
+        border-radius: 3px;
+        padding: 10px 5px ;
+        background-color: rgb(59, 59, 59);
+        color: white;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            transition: all 0.3s ease 0s;
+            color: #c4ab1e;
+        }
+
+    }
+}
+.card-catalog {
+
+    // .card-catalog__title
+
+    &__title {
+    }
+
+    // .card-catalog__brand
+
+    &__brand {
+    }
+
+    // .card-catalog__price
+
+    &__price {
+    }
+}
+.btn {
+}

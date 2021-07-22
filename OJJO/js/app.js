@@ -1,6 +1,19 @@
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
+//========================================================================================================================================================
+
+//Sorting catalog submenu js
+
+const categLabel = document.querySelectorAll(".sorting-catalog__categ")
+if (categLabel) {
+    categLabel.forEach(el => {
+        el.addEventListener("click", () => {
+            el.classList.toggle('active')
+        })
+    });
+}
+//========================================================================================================================================================
 
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
