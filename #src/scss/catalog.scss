@@ -1,5 +1,5 @@
 .catalog {
-    margin-top: 190px;
+    margin-top: 160px;
 
     // .catalog__container
 
@@ -9,35 +9,71 @@
     // .catalog__cards
 
     &__cards {
+        margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px 30px;
+        @media (max-width:$md2+px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width:$md3+px){
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     // .catalog__card
 
     &__card {
-        img {
-            max-width: 280px;
-            max-height: 220px;
-        }
+
     }
 
     // .catalog__more-btn
 
     &__more-btn {
+        margin-bottom: 50px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        white-space: nowrap;
+        &:hover {
+           // color: white;
+           // background-color: #333;
+        }
     }
 
     // .catalog__content
 
     &__content {
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+
     }
 
     // .catalog__content-text
 
     &__content-text {
+        width: 70%;
+        padding-right: 80px;
+        font-size: 16px;
+        line-height: 150%;
+        @media (max-width:$md3+px){
+             width: 100%;
+             padding-right: 0;
+             text-align: center;
+        }
     }
 
     // .catalog__content-decor
 
     &__content-decor {
+        width: 30%;
+        @media (max-width:$md3+px){
+             display: none;
+        }
+        img {
+            max-width: 270px;
+            max-height:290;
+        }
     }
 }
 
@@ -57,8 +93,13 @@
 
         //justify-content: center;
         @media (max-width: 1090px){
-            grid-template-columns: 1fr 1fr 1fr
-
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width:$md3+px){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:$md4+px){
+            grid-template-columns: 1fr;
         }
     }
 
@@ -69,6 +110,10 @@
         margin-right: 17px;
         margin-bottom: auto;
         cursor: pointer;
+
+        @media (max-width: 1090px){
+            padding-bottom: 25px;
+        }
         &::after {
             content: "";
             margin-top: 4px;
@@ -85,6 +130,12 @@
                 left: 0;
             }
         }
+        &.active.sorting-catalog__categ::after {
+            display: none;
+        }
+        &.active>.sorting-catalog__triangle {
+            transform: rotate(180deg);
+        }
     }
 
     &__triangle {
@@ -95,8 +146,8 @@
         height: 0;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
-
         border-bottom: 8px solid #333;
+        transition: all 0.4s;
     }
 
     // .sorting-catalog__sub-menu-list
@@ -110,9 +161,7 @@
         background-color: #ffffff;
         padding: 3px 0 0 0;
         border-radius: 3px;
-
         font-size: 14px;
-
     }
 
     // .sorting-catalog__sub-menu-item
@@ -124,31 +173,54 @@
         padding: 10px 5px ;
         background-color: rgb(59, 59, 59);
         color: white;
+        transition: all 0.3s ease 0s;
         &:last-child {
             margin-bottom: 0;
         }
         &:hover {
-            transition: all 0.3s ease 0s;
             color: #c4ab1e;
         }
 
     }
 }
 .card-catalog {
-
+    text-align: center;
+    padding: 25px;
+    border: solid 1px rgb(194, 194, 194);
+    cursor: pointer;
+    &:hover {
+        img {
+            transform: scale(107%);
+        }
+    }
+    img {
+        max-width: 280px;
+        max-height: 220px;
+        cursor: pointer;
+        transition: all 0.5s ease 0s;
+    }
     // .card-catalog__title
 
     &__title {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 150%;
     }
 
     // .card-catalog__brand
 
     &__brand {
+        margin-bottom: 15px;
+        font-family: "Gilroy-Semibold";
+        font-size: 24px;
+        line-height: 140%;
     }
 
     // .card-catalog__price
 
     &__price {
+        pointer-events: none;
     }
 }
 .btn {
