@@ -1870,7 +1870,11 @@ img {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px 30px;
+  gap: 50px 30px;
+}
+
+.catalog__card {
+  color: inherit;
 }
 
 .catalog__more-btn {
@@ -2388,8 +2392,11 @@ img {
   }
 
   .catalog__cards {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: (300px)[1];
+    grid-template-columns: repeat(1, 300px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .catalog__content-text {
