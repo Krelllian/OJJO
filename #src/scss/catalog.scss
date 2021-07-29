@@ -153,6 +153,8 @@
     // .sorting-catalog__sub-menu-list
 
     &__sub-menu-list {
+        position: relative;
+        z-index: 1;
         display: none;
         position: absolute;
         top: 100%;

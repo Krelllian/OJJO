@@ -1749,6 +1749,14 @@ img {
 
 .contacts__map {
   margin-top: 50px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.contacts__map iframe {
+  width: 100%;
+  height: 700px;
+  max-height: 55vh;
 }
 
 .contacs__breadcrumbs {
@@ -1970,6 +1978,8 @@ img {
 }
 
 .sorting-catalog__sub-menu-list {
+  position: relative;
+  z-index: 1;
   display: none;
   position: absolute;
   top: 100%;
@@ -2038,6 +2048,165 @@ img {
 
 .card-catalog__price {
   pointer-events: none;
+}
+
+.card-page {
+  margin-top: 150px;
+}
+
+.card-page__breadcrumbs {
+  margin-bottom: 50px;
+}
+
+.card-page__thumbnail {
+  margin-top: 20px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card__imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 30px;
+  width: 40%;
+  cursor: pointer;
+  margin-bottom: auto;
+}
+
+.card__imgs picture {
+  width: 30%;
+}
+
+.card__imgs picture:first-child {
+  width: 100%;
+}
+
+.card__content {
+  margin-top: 20px;
+  position: relative;
+  padding: 40px 30px;
+  width: 60%;
+  border: solid 1px rgba(128, 128, 128, 0.3);
+}
+
+.card__content::before {
+  content: " ";
+  position: absolute;
+  width: calc(100% + 20px);
+  z-index: -1;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.card__title {
+  margin-bottom: 30px;
+  font-family: "Gilroy-Medium";
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.card__info {
+  position: relative;
+  font-size: 14px;
+  line-height: 150%;
+  color: #979797;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.card__info span {
+  margin-left: 25px;
+}
+
+.card__info::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  opacity: 0.3;
+}
+
+.card__text {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.card__price {
+  margin-bottom: 30px;
+  font-family: "Gilroy-Semibold";
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card__buy-btn {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.card__full-descr {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__full-descr-text {
+  width: 70%;
+  padding-right: 80px;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.card__full-descr-decor {
+  width: 30%;
+}
+
+.card__full-descr-decor img {
+  max-width: 270px;
+  max-height: 290;
+}
+
+.recommendation__suptitle {
+  margin-bottom: 15px;
+  font-size: 21px;
+  line-height: 140%;
+  text-align: center;
+}
+
+.recommendation__title {
+  font-family: Noto Serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .page {
@@ -2360,6 +2529,15 @@ img {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .card__imgs {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .card__content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -2413,11 +2591,37 @@ img {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
+
+  .card__buy-btn {
+    width: 100%;
+  }
+
+  .card__add {
+    width: 100%;
+    line-height: 150%;
+  }
+
+  .card__full-descr-text {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .card__full-descr-decor {
+    display: none;
+  }
 }
 
 @media (max-width: 510px) {
   .hero-brands__item {
     width: 33.333%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card__title {
+    font-size: 20px;
+    text-align: center;
   }
 }
 
@@ -2485,6 +2689,31 @@ img {
   .sorting-catalog__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .card__info span {
+    margin-left: 0;
+    margin-top: 15px;
+    display: block;
+  }
+
+  .card__full-descr {
+    margin-bottom: 70px;
+  }
+
+  .recommendation__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 445px) {
+  .card-page {
+    margin-top: 130px;
+  }
+
+  .card-page__breadcrumbs li {
+    font-size: 12px;
   }
 }
 
