@@ -25,8 +25,27 @@ if (thumbnail) {
             el.classList.add('active')
             imgFull.src = el.dataset.url
             imgFull.previousSibling.srcset = el.dataset.url.slice(0, -3) + "webp"
-
-            console.log(imgFull)
         })
     })
+}
+
+//========================================================================================================================================================
+
+//header fixed after hero section
+
+
+
+let headerHeroFixed = document.querySelector(".hero-fixed")
+if (headerHeroFixed) {
+    let heroSection = document.querySelector(".hero")
+    let heroHeight = heroSection.offsetHeight
+    let headerHeight = headerHeroFixed.offsetHeight
+    window.addEventListener('scroll', () => {
+        if ((window.pageYOffset - headerHeight) > heroHeight) {
+            headerHeroFixed.classList.add('header_fixed')
+        } else {
+            headerHeroFixed.classList.remove('header_fixed')
+        }
+    })
+
 }

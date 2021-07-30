@@ -1096,6 +1096,10 @@ img {
   color: gold;
 }
 
+.menu__list a._active {
+  color: gold;
+}
+
 .menu__link {
   color: white;
 }
@@ -1917,7 +1921,7 @@ img {
 
 .catalog__content-decor img {
   max-width: 270px;
-  max-height: 290;
+  max-height: 290px;
 }
 
 .sorting-catalog__list {
@@ -1928,9 +1932,6 @@ img {
   margin-bottom: 60px;
   font-size: 16px;
   line-height: 150%;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
 }
 
 .sorting-catalog__categ {
@@ -2018,9 +2019,9 @@ img {
 }
 
 .card-catalog:hover img {
-  -webkit-transform: scale(107%);
-      -ms-transform: scale(107%);
-          transform: scale(107%);
+  -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 .card-catalog img {
@@ -2190,7 +2191,7 @@ img {
 
 .card__full-descr-decor img {
   max-width: 270px;
-  max-height: 290;
+  max-height: 290px;
 }
 
 .recommendation__suptitle {

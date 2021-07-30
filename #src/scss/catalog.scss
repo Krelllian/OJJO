@@ -72,7 +72,7 @@
         }
         img {
             max-width: 270px;
-            max-height:290;
+            max-height:290px;
         }
     }
 }
@@ -89,7 +89,7 @@
         font-size: 16px;
         line-height: 150%;
 
-        align-items: top;
+
 
         //justify-content: center;
         @media (max-width: 1090px){
@@ -192,7 +192,7 @@
     cursor: pointer;
     &:hover {
         img {
-            transform: scale(107%);
+            transform: scale(1.07);
         }
     }
     img {

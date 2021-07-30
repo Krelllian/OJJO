@@ -28,11 +28,32 @@ if (thumbnail) {
             el.classList.add('active')
             imgFull.src = el.dataset.url
             imgFull.previousSibling.srcset = el.dataset.url.slice(0, -3) + "webp"
-
-            console.log(imgFull)
         })
     })
 }
+
+//========================================================================================================================================================
+
+//header fixed after hero section
+
+
+
+let headerHeroFixed = document.querySelector(".hero-fixed")
+if (headerHeroFixed) {
+    let heroSection = document.querySelector(".hero")
+    let heroHeight = heroSection.offsetHeight
+    let headerHeight = headerHeroFixed.offsetHeight
+    window.addEventListener('scroll', () => {
+        if ((window.pageYOffset - headerHeight) > heroHeight) {
+            headerHeroFixed.classList.add('header_fixed')
+        } else {
+            headerHeroFixed.classList.remove('header_fixed')
+        }
+    })
+
+}
+
+
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -87,6 +108,7 @@ let unlock = true;
 
 //=================
 //ActionsOnHash
+
 if (location.hash) {
 	const hsh = location.hash.replace('#', '');
 	if (document.querySelector('.popup_' + hsh)) {
@@ -97,6 +119,7 @@ if (location.hash) {
 }
 //=================
 //Menu
+
 let iconMenu = document.querySelector(".icon-menu");
 if (iconMenu != null) {
 	let delay = 500;
@@ -124,6 +147,7 @@ function menu_close() {
 	menuBody.classList.remove("_active");
 	headerRightMenu.classList.remove("_active");
 }
+
 // Убирает классы на определённой ширине
 const mediaQuery = window.matchMedia('(min-width: 991.98px)')
 function handleTabletChange(e) {
@@ -138,7 +162,6 @@ function handleTabletChange(e) {
 		headerRightMenu.classList.remove("_active");
 
 		body.classList.remove("_lock");
-		console.log(menuBody);
 	}
 }
 mediaQuery.addListener(handleTabletChange)
@@ -173,6 +196,7 @@ removeBodyLock(madiaQueryMax)
 
 //=================
 //BodyLock
+
 function body_lock(delay) {
 	let body = document.querySelector("body");
 	if (body.classList.contains('_lock')) {
@@ -217,7 +241,6 @@ function body_lock_add(delay) {
 		}, delay);
 	}
 }
-
 
 //=================
 // LettersAnimation
@@ -1535,7 +1558,7 @@ if (goto_links) {
 		});
 	}
 }
-function _goto(target_block, speed, offset = 0) {
+function _goto(target_block, speed, offset = 100) {
 	let header = '';
 	//OffsetHeader
 	//if (window.innerWidth < 992) {

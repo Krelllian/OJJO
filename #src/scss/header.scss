@@ -227,6 +227,9 @@
 			&:hover {
 				color: gold;
 			}
+			&._active{
+				color: gold;
+			}
 		}
 		@media (max-width:$md2+px){
 			margin-left: -25px;
